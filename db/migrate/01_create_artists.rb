@@ -7,8 +7,6 @@ class CreateArtists < ActiveRecord::Migration
      t.string :hometown
     end
   end
-end
-
 
 connection = ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
@@ -26,3 +24,5 @@ sql = <<-SQL
 SQL
 
 ActiveRecord::Base.connection.execute(sql)
+
+end
